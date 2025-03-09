@@ -1,0 +1,37 @@
+
+
+
+.pink {
+    background-color: rgb(230, 101, 166);
+    width: 95%;
+    font-size: large;
+    margin:15px;
+
+}
+
+.italic{
+    font-style: italic;
+}
+
+
+.bold{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.text-align_center{
+    text-align: center;
+}
+
+.text-align_right{
+    text-align: right;
+}
+
+.grey{
+    color: rgb(151, 147, 147);
+    font-size: large;
+}
+
+.underline{
+    text-decoration: underline;
+}
