@@ -1,0 +1,44 @@
+1a Skriv ett regex som kontrollerar att det finns en längd i strängen, som anges i centimeter:
+"Fiskarna som jag fångade var 55 cm långa."
+Svar: Regex: \d+.cm
+
+
+1b Denna gången vill vi veta om det finns två längder.
+Svar: Regex: d+.cm.*\d+.cm
+    matchar både 10cm samt 12 cm.
+
+
+1c Längderna ska vara samma enhet.
+"Fiskarna som jag fångade var 55 cm långa, så båda fick plats i min 1,23 m långa låda."
+SVAR: \d+.(cm|m).*\d+.\1
+
+
+2 Skriv ett regex som matchar ett svenskt postnummer. Postnummer består av fem siffror indelade i
+två grupper med mellanslag emellan. Exempel: "123 45"
+SVAR: \d{3}.\d{2}
+
+
+3 Skriv ett regex som matchar ett datum skrivet enligt den internationella standarden ISO 8601,
+alltså 10 tecken med bindestreck mellan avdelningarna. Exempel: 2025-03-10.
+SVAR: Regex: \d{4}-\d{2}-\d{2}
+
+
+4 Skriv ett regex som matchar ett pengavärde i siffror. Exempel på värden som ska matchas:
+200 kr
+12,50 kr
+0,35 kr
+SVAR: Regex: \d+(,\d{2})?\s*kr
+
+
+5a Skriv ett regex som matchar en e-postadress (användarnamn@server.domän) enligt följande icke kompletta regler.
+användarnamn kan innehålla bokstäver, siffror och specialtecknen som punkt och bindestreck
+server kan innehålla samma sorts tecken
+domän kan innehålla bokstäver och siffror
+SVAR1: Regex: [a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]+
+SVAR2: Regex: [\w.-]+@[\w.-]+\.\w+
+
+
+5b Gör ett regex som matchar en komplett e-postadress enligt specifikationen i artikeln här:
+"What is a valid email address format"
+Regex: ^(?!.*\.\.)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+
