@@ -1,15 +1,15 @@
 https://playwright.dev/docs/other-locators
 
-### User story [U1] - Verify "Add timer" button
+## User story [U1] - Verify "Add timer" button
 Som användare vill jag kunna se att knappen "Add timer" är synlig 
 och kan klickas. Så att man är redo att ställa en timer.
 
-### Acceptanskriterier [A1]
-[A1.1] När jag klickar på knappen "Add timer", ska en timer skapas på skärmen.
+## Acceptanskriterier [A1]
+###[A1.1] När jag klickar på knappen "Add timer", ska en timer skapas på skärmen.
 
-### Testscenario [T1]
-[T1.1] Navigera till webbsidan.
-[T1.2] Kontrollera att knappen "Add timer" finns och kan klickas
+## Testscenario [T1]
+###[T1.1] Navigera till webbsidan.
+###[T1.2] Kontrollera att knappen "Add timer" finns och kan klickas
 
 # -----------------------------------------------
 
@@ -35,10 +35,10 @@ Så att jag kan starta samt nollställa en timer.
 Som användare vill jag kunna se att knappen 'Add note' är synlig
 och kan klickas. Så att man är redo att göra en note.
 
-## Acceptanskriterier[A3]
+### Acceptanskriterier[A3]
 [A3.1] När jag klickar på knappen, ska en text "Click to change text" visas på skärmen.
 
-## Testscenario [T3]
+### Testscenario [T3]
 [T3.1] Navigera till webbsidan.
 [T3.2] Kontrollera att knappen "Add note" finns och kan klickas
 
@@ -48,14 +48,14 @@ och kan klickas. Så att man är redo att göra en note.
 Som användare vill jag kunna se att knappen 'Add note' kan klickas och addera texter, spara, byta ordning på och radera notes. 
 Så att jag själv kan påbörja en note spara, ändra, byta ordning samt radera densamma.
 
-## Acceptanskriterier[A4]
+###Acceptanskriterier[A4]
 [A4.1] Det ska vara möjligt att klicka på rutan med texten "Click to change text"
 och ändra innehållet.
 [A4.2] När man trycker "Enter", sparas texten.
 [A4.3] När man trycker på korgen, suddas texten bort.
 [A4.4] Genom att trycka på pilarna ska man kunna ändra ordning på sina notes.
 
-## Testscenario [T4] – Kontrollera att knappen 'Add note', addera och delete note!
+### Testscenario [T4] – Kontrollera att knappen 'Add note', addera och delete note!
 [T4.1] Navigera till webbsidan.
 [T4.2] klicka på knappen "Add notes"
 [T4.3] Klicka/markera textrutan "Click to change text" 
