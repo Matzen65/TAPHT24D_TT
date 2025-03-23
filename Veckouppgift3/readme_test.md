@@ -1,15 +1,20 @@
 https://playwright.dev/docs/other-locators
 
+Test Time App
+
 ## User story [U1] - Verify "Add timer" button
-Som användare vill jag kunna se att knappen "Add timer" är synlig 
-och kan klickas. Så att man är redo att ställa en timer.
+Som användare vill jag kunna öppna en widgets för en Timer 
+och ta bort densamma.
 
 ## Acceptanskriterier [A1]
-###[A1.1] När jag klickar på knappen "Add timer", ska en timer skapas på skärmen.
+[A1.1] När jag klickar på knappen "Add timer", ska en timer skapas på skärmen.
+[A1.2] När jag klickar på icon för papperskorg ska Timern släckas
 
 ## Testscenario [T1]
-###[T1.1] Navigera till webbsidan.
-###[T1.2] Kontrollera att knappen "Add timer" finns och kan klickas
+[T1.1] Navigera till webbsidan.
+[T1.2] Kontrollera att knappen "Add timer" finns och kan klickas
+[T1.3] kontrollera att en widget för timer kommer upp
+[T1.4] Klicka ikonen för papperskorg och kontrollera att Timern släcks
 
 # -----------------------------------------------
 

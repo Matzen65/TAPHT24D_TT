@@ -2,7 +2,7 @@ import re
 
 from playwright.sync_api import Page, expect
 
-def test_verify_add_timer_button(page: Page):
+def test_verify_add_timer_remove_timer(page: Page):
     """
     Testscenario [T1]
     Kontrollera att knappen 'Add timer' är synlig och kan klickas
@@ -15,15 +15,14 @@ def test_verify_add_timer_button(page: Page):
     expect(add_timer_button).to_be_visible()
     add_timer_button.click()
 
+    # T1.3 - kontrollera att en widget för timer kommer upp
+    timer_widget = page.locator(".timer")
+    expect(timer_widget).to_be_visible()
 
-def test_interaction_timer_button(page: Page):
-    """
-    Testscenario [T2]
-    Kontrollera att knappen 'Add timer' är synlig och kan interageras med.
-    """
-    page.goto("https://lejonmanen.github.io/timer-vue/")
-    add_timer_button = page.locator('button:has-text("Add timer")')
-    add_timer_button.click()
+    # T1.4 Klicka ikonen för papperskorg och kontrollera att Timern släcks
+    erase_button = timer_widget.locator("div.icon.close")
+    erase_button.click()
+    expect(timer_widget).not_to_be_visible()
 
 ###########################################################
 
@@ -90,7 +89,7 @@ def test_interaction_add_note_button(page: Page):
     expect(page.locator('h3:has-text("TEST T4.7")')).to_be_visible()
     expect(page.locator('h3:has-text("TEST T4.4")')).to_be_visible()
 
-    #[T4.9] Testa att radera/stänga den första texten med "CLOSE" button (papperskorgsikonen) samt kontrollera att det gjorts
+    #[T4.9] Testa att radera/stänga den första texten genom att klicka ikonen för papperskorg och kontrollera att det gjorts
     delete_button = page.locator('.icon.close').first
     delete_button.click()
     expect(page.locator('h3:has-text("TEST T4.2")')).not_to_be_visible()
